@@ -16,7 +16,6 @@ public class MoneyTransferTest {
 
     private DashboardPage shouldOpenDashboardPage() {
         open("http://localhost:9999");
-
         val loginPage = new LoginPage();
         val authInfo = DataHelper.getAuthInfo();
         val verificationPage = loginPage.validLogin(authInfo);
@@ -41,7 +40,6 @@ public class MoneyTransferTest {
 
     @Test
     void shouldTransferMoneyFromCard1toCard2() {
-
         DashboardPage dashboardPage = shouldOpenDashboardPage();
         dashboardPage.dashboardPageVisible();
         int expected1 = dashboardPage.getBalanceCard2() + amountValid;
